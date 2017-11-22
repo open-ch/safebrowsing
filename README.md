@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/google/safebrowsing.svg?branch=master)](https://travis-ci.org/google/safebrowsing)
+[![Build Status](https://travis-ci.org/open-ch/safebrowsing.svg?branch=master)](https://travis-ci.org/open-ch/safebrowsing)
 
 # Reference Implementation for the Usage of Google Safe Browsing APIs (v4)
 
@@ -28,7 +28,7 @@ documentation.
 To download and install from the source, run the following command:
 
 ```
-go get github.com/google/safebrowsing
+go get github.com/open-ch/safebrowsing
 ```
 
 The programs below execute from your `$GOPATH/bin` folder. 
@@ -50,7 +50,7 @@ shows warnings recommended by Safe Browsing.
 key:
 
 	```
-	go get github.com/google/safebrowsing/cmd/sbserver
+	go get github.com/open-ch/safebrowsing/cmd/sbserver
 	sbserver -apikey $APIKEY
 	```
 
@@ -91,7 +91,7 @@ Browsing library can be used to protect users from unsafe URLs. This
 command-line tool filters unsafe URLs piped via STDIN. Example usage:
 
 ```
-$ go get github.com/google/safebrowsing/cmd/sblookup
+$ go get github.com/open-ch/safebrowsing/cmd/sblookup
 $ echo "http://testsafebrowsing.appspot.com/apiv4/ANY_PLATFORM/MALWARE/URL/" | sblookup -apikey=$APIKEY
   Unsafe URL found:  http://testsafebrowsing.appspot.com/apiv4/ANY_PLATFORM/MALWARE/URL/ [{testsafebrowsing.appspot.com/apiv4/ANY_PLATFORM/MALWARE/URL/ {MALWARE ANY_PLATFORM URL}}]
 ```
@@ -102,5 +102,5 @@ To perform an end-to-end test on the package with the Safe Browsing backend,
 run the following command:
 
 ```
-go test github.com/google/safebrowsing -v -run TestSafeBrowser -apikey $APIKEY
+go test github.com//safebrowsing -v -run TestSafeBrowser -apikey $APIKEY
 ```
